@@ -1,0 +1,1 @@
+SELECT id, alphabet FROM ( SELECT sampleTable.id, sampleTable.alphabet FROM sampleTable UNION ALL SELECT comptbl.cid, comptbl.calphabet FROM comptbl ) t GROUP BY id, alphabet HAVING COUNT(*) = 1 ORDER BY id
